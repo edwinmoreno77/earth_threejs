@@ -55,8 +55,8 @@ const PlanetScene = () => {
     scene.add(moon);
 
     // Iluminación (Sol)
-    const light = new THREE.DirectionalLight(0xffffff, 1.8);
-    light.position.set(2, 2, 2);
+    const light = new THREE.DirectionalLight(0xffffff, 6.3);
+    light.position.set(5, 2, 5);
     scene.add(light);
 
     // Posicionar la cámara
@@ -68,7 +68,7 @@ const PlanetScene = () => {
     // Crear estrellas más lejanas
     function createStars() {
       const starGeometry = new THREE.BufferGeometry();
-      const starCount = 1000;
+      const starCount = 2000;
       const positions = new Float32Array(starCount * 3);
       const distance = 5; // Radio de la esfera de estrellas
 
