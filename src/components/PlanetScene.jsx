@@ -19,7 +19,6 @@ const PlanetScene = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     const mount = mountRef.current;
-    const currentMount = mountRef.current;
     mount.appendChild(renderer.domElement); // Agregar el canvas al contenedor
 
     // Cargar texturas
@@ -115,7 +114,7 @@ const PlanetScene = () => {
         const deltaY = event.clientY - previousMouseY;
 
         // Rotar la Tierra
-        const rotationSpeed = 0.005;
+        const rotationSpeed = 0.006;
         earth.rotation.y += deltaX * rotationSpeed;
         earth.rotation.x += deltaY * rotationSpeed;
 
@@ -202,11 +201,11 @@ const PlanetScene = () => {
 
     // Animación
     const animate = () => {
-      earth.rotation.y += 0.002 * rotationDirection; // Rotación de la Tierra
+      earth.rotation.y += 0.0004 * rotationDirection; // Rotación de la Tierra
 
       // Movimiento orbital de la Luna
-      angle += 0.01; // Velocidad de la órbita
-      const moonDistance = 1.4; // Distancia de la Luna a la Tierra
+      angle += 0.005; // Velocidad de la órbita
+      const moonDistance = 1; // Distancia de la Luna a la Tierra
       moon.position.x = earth.position.x + Math.cos(angle) * moonDistance;
       moon.position.z = earth.position.z + Math.sin(angle) * moonDistance;
 
@@ -224,11 +223,8 @@ const PlanetScene = () => {
       document.removeEventListener("click", onMouseClick);
       document.removeEventListener("wheel", onWheel);
       window.removeEventListener("resize", onWindowResize);
-      if (currentMount) {
-        currentMount.removeChild(renderer.domElement);
-      }
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (mount) {
+        mount.removeChild(renderer.domElement);
       }
     };
   }, []);
