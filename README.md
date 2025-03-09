@@ -1,12 +1,11 @@
-# React + Vite
+# Earth project with React and threeJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an interactive 3D simulation of the Earth rotating, with the Moon orbiting around it and a starry space background. Inspired by the Google Earth experience, it allows users to change the Earth's direction through interaction. The application is built with React for the interface and Three.js for 3D rendering, combining interactivity with realistic visuals.
 
-Currently, two official plugins are available:
+![eart](https://github.com/edwinmoreno77/earth_threejs/blob/main/src/assets/earth_threejs.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## preview 
 
-## Expanding the ESLint configuration
+[Visit my project here](https://edwinmoreno77.github.io/earth_threejs/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+``https://edwinmoreno77.github.io/earth_threejs/``
